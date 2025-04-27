@@ -1,0 +1,49 @@
+@font-face {
+    font-family: inter;
+    src: url('/assets/font/Inter-SemiBold.woff');
+}
+
+@font-face {
+    font-family: sanchez;
+    src: url('/assets/font/Sanchez-Regular.woff');
+}
+
+@font-face {
+    font-family: handwritten;
+    src: url(/assets/font/Hertina.woff);
+}
+
+@font-face {
+    font-family: cornubianito;
+    src: url(/assets/font/Alivhea.woff);
+}
+
+@font-face {
+    font-family: lightinter;
+    src: url(/assets/font/Inter-LightBETA.woff);
+}
+
+body {
+    background-image:  linear-gradient(rgba(224, 216, 216, 0.226), rgba(192, 184, 184, 0.664)),
+    url('/assets/images/textura.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0%
+}
+
+header ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 90px;
+
+}
+
+header ul {
+    text-align: center;
+    font-size: 18px;
+    font-family: lightinter;
+    padding-top: 2%;
+
+}

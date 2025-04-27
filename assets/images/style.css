@@ -8,6 +8,31 @@
     src: url('/assets/font/Sanchez-Regular.woff');
 }
 
+@font-face {
+    font-family: cornubianito;
+    src: url(/assets/font/Alivhea.woff);
+}
+
+@font-face {
+    font-family: lightinter;
+    src: url(/assets/font/Inter-LightBETA.woff);
+}
+
+.monsieur-la-doulaise-regular {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+    .cinzel {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+  
+
 body {
     background-image:  linear-gradient(rgba(224, 216, 216, 0.226), rgba(192, 184, 184, 0.664)),
     url('/assets/images/textura.png');
@@ -18,9 +43,61 @@ body {
     margin: 0%
 }
 
-header {
-    background-image: url('/assets/images/mineradora.png');
-    padding-bottom: 5%;
+header ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 90px;
+
+}
+
+header ul {
     text-align: center;
-    font-family: sanchez;
+    font-size: 18px;
+    font-family: lightinter;
+    padding-top: 2%;
+
+}
+
+
+#content {
+    text-align: center;
+}
+
+#content h2 {
+    font-family: "Monsieur La Doulaise";
+    font-size: 110px; 
+    font-weight: lighter;   
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+#content h1 {
+    font-family: Cinzel;
+    font-size: 120px;
+    font-weight: lighter;
+    margin-top: -3%;
+}
+
+#content h5, h3, p {
+    font-family: inter;
+}
+
+#content h5 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: -3%;
+}
+
+#content h3 {
+    font-size: 48px;
+    margin-top: -1%;
+}
+
+#content p {
+    font-size: 18px;
+    margin-top: -2%;
+}
+
+#content img {
+    width: 5%;
 }
