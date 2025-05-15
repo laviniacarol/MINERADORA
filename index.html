@@ -6,6 +6,7 @@
     <title>MINERADORA RS</title>
     <link rel="stylesheet" href="/assets/images/style.css">
 
+    <link rel="stylesheet" href="/script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
@@ -45,9 +46,8 @@
       <img src="assets/images/min.png" alt="Produto 1">
       <h3>Minério de Ferro</h3>
       <div class="carrinho">
-          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000">
+          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000" required>
           <button class="btn-adicionar">Adicionar ao Carrinho</button>
-          <p class="valor-total">Valor total: R$ 0,00</p>
       </div>
     </div>
   
@@ -55,9 +55,8 @@
       <img src="assets/images/min1.png" alt="Produto 2">
       <h3>Minério de Ferro</h3>
       <div class="carrinho">
-          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000">
+          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000" required>
           <button class="btn-adicionar">Adicionar ao Carrinho</button>
-          <p class="valor-total">Valor total: R$ 0,00</p>
       </div>
     </div>
   
@@ -65,9 +64,8 @@
       <img src="assets/images/min2.png" alt="Produto 3">
       <h3>Minério de Ferro</h3>
       <div class="carrinho">
-          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000">
+          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000" required>
           <button class="btn-adicionar">Adicionar ao Carrinho</button>
-          <p class="valor-total">Valor total: R$ 0,00</p>
       </div>
   </div>
   
@@ -75,9 +73,8 @@
       <img src="assets/images/min3.png" alt="Produto 4">
       <h3>Minério de Ferro</h3>
       <div class="carrinho">
-          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000">
+          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000" required>
           <button class="btn-adicionar">Adicionar ao Carrinho</button>
-          <p class="valor-total">Valor total: R$ 0,00</p>
       </div>
   </div>
   
@@ -85,9 +82,8 @@
       <img src="assets/images/min4.png" alt="Produto 5">
       <h3>Minério de Ferro</h3>
       <div class="carrinho">
-          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000">
+          <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000" required>
           <button class="btn-adicionar">Adicionar ao Carrinho</button>
-          <p class="valor-total">Valor total: R$ 0,00</p>
 </div>
     </div>
   
@@ -95,16 +91,47 @@
         <img src="assets/images/min.png" alt="Produto 1">
         <h3>Minério de Ferro</h3>
         <div class="carrinho">
-            <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000">
+            <input type="number" class="quantidade-input" placeholder="KG" min="1" max="20000" required>
             <button class="btn-adicionar">Adicionar ao Carrinho</button>
-            <p class="valor-total">Valor total: R$ 0,00</p>
         </div>
     </div>
     </div>
   </section>
-  
 
-  <script></script>
+
+    <div class="carrossel">
+      <div class="images" id="slider">
+    <img src="/assets/images/bathroom.jpg">
+    <img src="/assets/images/hotel.jpg">
+    <img src="/assets/images/sink.jpg">
+    <img src="/assets/images/bath3.jpg">
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let index = 0;
+        const container = document.getElementById('slider');
+        const slides = container.children;
+        const totalSlides = slides.length;
+        
+        // Configurações iniciais
+        container.style.width = `${totalSlides * 100}%`;
+        Array.from(slides).forEach(slide => {
+            slide.style.width = `${100 / totalSlides}%`;
+        });
+        
+        // Função para passar slides
+        function passarSlide() {
+            index = (index + 1) % totalSlides; 
+            container.style.transform = `translateX(${-100 * index / totalSlides}%)`;
+        }
+        
+        // Inicia o carrossel
+        setInterval(passarSlide, 3000);
+    });
+    </script>
+  
 
 </body>
 </html>
