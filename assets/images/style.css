@@ -76,7 +76,7 @@ header ul {
     font-family: Cinzel;
     font-size: 120px;
     font-weight: lighter;
-    margin-top: -3%;
+    margin-top: 0%;
 }
 
 #content h5, h3, p {
@@ -113,7 +113,7 @@ header ul {
     background-attachment: fixed; 
     padding: 0px 0px;
     width: 100%;
-    margin-top: 12%;
+    margin-top: 5%;
     min-height: 60vh;
     color: white; 
     text-align: center;
@@ -138,10 +138,10 @@ header ul {
 #title {
     text-align: center;
     font-size: 40px;
-    position: absolute;
     left: 35%;
-    top: 117%;
     color: white;
+    position: absolute;
+    padding-top: 3%;
 }
 
 
@@ -175,13 +175,52 @@ header ul {
     margin-bottom: 5%;
 }
 
+
+
+.texto-carrosel {
+    padding-top: 120px; 
+    position: relative;
+  }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3%;
+    margin-left: 4%;
+    font-family: Inter;
+    margin-top: 2%;
+}
+
+.container span {
+    color: red;
+}
+
+.container h3,h1 {
+    line-height: 30%;
+}
+
+
+.container h3 {
+    font-size: 35px;
+}
+
+.container h1 {
+    font-size: 80px;
+}
+
+.container h5 {
+    font-size: 23px;
+    font-family: lightinter;
+    line-height: 135%;
+
+}
+
 .carrossel {
     overflow: hidden;
-    width: 60%;
-    height: 650px; 
-    margin-top: 10%;
-    margin-left: 20%;
-    margin-bottom: 10%;
+    width: 50%;
+    height: 500px; 
+    margin-top: 15%;
 }
 
 .images {

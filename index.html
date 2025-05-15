@@ -38,10 +38,53 @@
    </div>
    </header>
 
+  <div class="container">
+   <div class="texto-carrosel">
+    <h3>NOSSO MINÉRIO NO <span>SEU</span></h3>
+    <h1>DIA A DIA</h1>
+    <h3>E DOS SEUS CLIENTES.</h3>
+    <h5>Pisos,<br> 
+        Paredes,<br>
+        Pias,<br>
+        E onde mais seu bom e qualidade<br>
+        estiverem presentes.
+    </h5>
 
-   <p id="title">CONHEÇA NOSSOS PRODUTOS</p>
+   </div>
+
+   <div class="carrossel">
+    <div class="images" id="slider">
+  <img src="/assets/images/bathroom.jpg">
+  <img src="/assets/images/hotel.jpg">
+  <img src="/assets/images/sink.jpg">
+  <img src="/assets/images/bath3.jpg">
+  </div>
+</div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      let index = 0;
+      const container = document.getElementById('slider');
+      const slides = container.children;
+      const totalSlides = slides.length;
+      
+      container.style.width = `${totalSlides * 100}%`;
+      Array.from(slides).forEach(slide => {
+          slide.style.width = `${100 / totalSlides}%`;
+      });
+      
+      function passarSlide() {
+          index = (index + 1) % totalSlides; 
+          container.style.transform = `translateX(${-100 * index / totalSlides}%)`;
+      }
+      
+      setInterval(passarSlide, 3000);
+  });
+  </script>
 
    <section id="products">  
+    <p id="title">CONHEÇA NOSSOS PRODUTOS</p>
     <div class="products-item">
       <img src="assets/images/min.png" alt="Produto 1">
       <h3>Minério de Ferro</h3>
@@ -99,39 +142,7 @@
   </section>
 
 
-    <div class="carrossel">
-      <div class="images" id="slider">
-    <img src="/assets/images/bathroom.jpg">
-    <img src="/assets/images/hotel.jpg">
-    <img src="/assets/images/sink.jpg">
-    <img src="/assets/images/bath3.jpg">
-    </div>
-  </div>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let index = 0;
-        const container = document.getElementById('slider');
-        const slides = container.children;
-        const totalSlides = slides.length;
-        
-        // Configurações iniciais
-        container.style.width = `${totalSlides * 100}%`;
-        Array.from(slides).forEach(slide => {
-            slide.style.width = `${100 / totalSlides}%`;
-        });
-        
-        // Função para passar slides
-        function passarSlide() {
-            index = (index + 1) % totalSlides; 
-            container.style.transform = `translateX(${-100 * index / totalSlides}%)`;
-        }
-        
-        // Inicia o carrossel
-        setInterval(passarSlide, 3000);
-    });
-    </script>
-  
+   
 
 </body>
 </html>
